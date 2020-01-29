@@ -1,12 +1,12 @@
 const express = require("express");
-const conectarDB = require("./config/db");
+// const conectarDB = require("./config/db");
 const cors = require('cors');
-const {usuarios, auth, proyectos, tareas} = require('./routes')
+// const {usuarios, auth, proyectos, tareas} = require('./routes')
 // crear el servidor
 const app = express();
 
 //conectar a la base de datos
-conectarDB();
+// conectarDB();
 
 //Habilitar corse
 app.use(cors())
@@ -21,11 +21,11 @@ app.get('/ping', (req, res) => {
   res.send('pong');
 });
 
-//importar rutas
-app.use("/api/usuarios", usuarios);
-app.use("/api/auth", auth);
-app.use("/api/proyectos", proyectos);
-app.use("/api/tareas", tareas);
+// //importar rutas
+// app.use("/api/usuarios", usuarios);
+// app.use("/api/auth", auth);
+// app.use("/api/proyectos", proyectos);
+// app.use("/api/tareas", tareas);
 
 // arrancar
 app.listen(port, '0.0.0.0', () => {
