@@ -1,7 +1,7 @@
 const express = require("express");
 const conectarDB = require("./config/db");
 const cors = require('cors');
-const {usuarios, auth, proyectos, tareas} = require('../servidor/routes')
+const {usuarios, auth, proyectos, tareas} = require('./routes')
 // crear el servidor
 const app = express();
 
