@@ -17,6 +17,10 @@ app.use(express.json({ extended: true }));
 //puerto
 const port = process.env.port || 4000;
 
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
 //importar rutas
 app.use("/api/usuarios", usuarios);
 app.use("/api/auth", auth);
