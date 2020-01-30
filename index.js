@@ -39,6 +39,6 @@ app.use("/api/proyectos", proyectos);
 app.use("/api/tareas", tareas);
 
 // arrancar
-app.listen(port, () => {
+app.listen(port,'0.0.0.0' ,() => {
   console.log(`Escuchando en ${port}`);
 });
