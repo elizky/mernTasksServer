@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 app.use(express.json({ extended: true }));
 
 //puerto
-const port = 4000;
+const port = process.env.port || 4000;
 
 app.get("/ping", (req, res) => {
   res.send("pong");
